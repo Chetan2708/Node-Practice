@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body >
+    <div id="container">
+    <div>
+      <input placeholder="username" id="userName" />
+      <button id="submitUserName">Submit</button>
+      <label style="color: red" id="userNickNameLabel"></label>
+    </div>
+    <div style="margin-top: 20px">
+      <input placeholder="search friend by userName" id="searchFriend" />
+      <button id="search">Search</button>
+      <label style="color: red" id="friendName"></label>
+    </div>
+  </div>
+  <div style="margin-top: 10px" id="chatBox">
+
+  </div> 
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+</html>

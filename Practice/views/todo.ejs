@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <script src="/todoScript.js" defer></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+      }
+
+      /* Navbar styling */
+      nav {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      nav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      /* Page content styling */
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .content h1 {
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .content h3 {
+        color: #555;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Todo form styling */
+      #userInput {
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #prioritySelector {
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #submitTodo {
+        display: block;
+        width: 70%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Todo list item styling */
+      #todo-item {
+        width: 70%;
+        background-color: #f7f7f7;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #todo-item span {
+        font-weight: bold;
+      }
+
+      /* Add Todo styling */
+      .add-todo {
+        width: 25%;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/todo">Todo</a>
+      <div id="loggedInUser" style="color: white">
+        <%- include('partials/header' ,{ profile:profile}) %>
+      </div>
+    </nav>
+
+    <form id="todoImageForm" enctype="multipart/form-data">
+      <!-- Page content -->
+      <div class="content">
+        <!-- Todo List -->
+        <div class="todo-list" id="todo-item"></div>
+
+        <!-- Add Todo -->
+        <div class="add-todo">
+          <h1>Welcome back to your own todo-app!</h1>
+          <h3>Add tasks, so that you can complete them on time 👍</h3>
+          <input id="userInput" placeholder="What's on your mind?" />
+          <select id="prioritySelector">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          
+          <input type="file" id="taskpic" name="pic" />
+          <button type="submit" id = "submitTodo"> Add to do</button>
+         
+        </div>
+      </div>
+    </form>
+
+   
+  </body>
+</html>

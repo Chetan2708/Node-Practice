@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      /* Global styles */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+      }
+
+      /* Navbar styling */
+      nav {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      nav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      /* Page content styling */
+      .content {
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .content h1 {
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+
+      .content p {
+        color: #555;
+        line-height: 1.6;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .email-icon {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/todo">Todo</a>
+        <div id="loggedInUser" style= "color: white;"><%- include('partials/header') %></div>
+    </nav>
+
+    <!-- Page content -->
+    <div class="content">
+      <h1>Contact Me via Email</h1>
+      <p>Feel free to send me an email at:</p>
+      <div class="contact-info">
+        <span class="email-icon">📧</span>
+        <p>random@email.internet</p>
+      </div>
+      <p>You can reach out to me with any questions or inquiries.</p>
+    </div>
+  </body>
+</html>

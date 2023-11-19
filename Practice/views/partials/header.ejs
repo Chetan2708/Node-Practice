@@ -1,0 +1,32 @@
+<style>
+  /* Styling for the header */
+  header {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    
+  }
+
+  .welcome {
+    margin-right: 10px;
+    padding:10px;
+  }
+  .Image{
+    width: 60px;
+     height:60px ;
+     border-radius: 50%;
+  }
+</style>
+
+<header>
+  <% if (username) { %>
+    <p class="welcome">Welcome, <%= username %>!</p>
+    <img class=" Image" src="<%= profile %>"   >
+    <p><a href="/logout">Logout</a></p>
+  <% } else { %>
+    <p>Please <a href="/login">Login</a></p>
+  <% } %>
+</header>

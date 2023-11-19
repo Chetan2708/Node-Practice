@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Error</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .container h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #f44336; /* Red color for error message */
+      }
+      .error-message {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #f44336; /* Red color for error message */
+      }
+      .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .back-link a {
+        color: #4caf50;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .back-link a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login Error</h1>
+      <p class="error-message">
+        Invalid username or password. Please try again.
+      </p>
+      <div class="back-link">
+        <a href="/login">Back to Login</a>
+      </div>
+      <div class="back-link">
+          <p>You can create a new one:</p>
+          <a href="/create-account">Create New Account</a>
+      </div>
+    </div>
+
+
+    <footer>
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Todo website</title>
+      <style>
+        /* Global styles */
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background-color: #f7f7f7;
+        }
+
+        /* Navbar styling */
+        nav {
+          background-color: #333;
+          overflow: hidden;
+        }
+
+        nav a {
+          float: left;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        nav a:hover {
+          background-color: #555;
+        }
+
+        /* Page content styling */
+        .content {
+          padding: 20px;
+          max-width: 800px;
+          margin: 0 auto;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+        }
+
+        .content h1 {
+          color: #333;
+          border-bottom: 2px solid #333;
+          padding-bottom: 10px;
+          text-align: center;
+          margin-top: 0;
+        }
+
+        .content p {
+          color: #555;
+          line-height: 1.6;
+          text-align: center;
+          font-size: 18px;
+        }
+
+        /* Custom styling for the welcome message */
+        .welcome-message {
+          background-color: #56b4e9;
+          color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          text-align: center;
+          font-size: 24px;
+          margin-top: 30px;
+        }
+        #todoButton {
+          color: #fff;
+          background-color: rgb(99, 99, 99);
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Navbar -->
+      <!-- Navbar -->
+      <nav>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+        <a href="/todo">Todo</a>
+        <div id="loggedInUser" style="color: white">
+          <%- include('partials/header' ,{ profile:profile}) %>
+        </div>
+      </nav>
+
+      <!-- Page content -->
+      <div class="content">
+        <h1>Welcome to my website!</h1>
+        <p>This website has a navbar and sections for home, about, and todo.</p>
+
+        <!-- Custom welcome message -->
+        <div class="welcome-message">
+          <p>Start organizing your tasks with our Todo section!</p>
+          <button id="todoButton">Lets GO!</button>
+        </div>
+      </div>
+      <%- include('partials/data', { data: data }) %>
+
+      <script>
+        // Function to get the currently logged-in user
+        //   async function getLoggedInUser() {
+        //     try {
+        //       const response = await fetch("/get-logged-in-user");
+        //       console.log(response);
+        //       if (response.ok) {
+        //         const user = await response.text();
+        //         const loggedInUserElement = document.getElementById("loggedInUser");
+        //         loggedInUserElement.textContent = `Logged in as: ${user}`;
+        //         loggedInUserElement.style.display = "inline"; // Show the element
+        //       }
+        //     } catch (error) {
+        //       console.error("Error fetching logged-in user:", error);
+        //     }
+        //   }
+
+        // Call the function when the page loads
+        //   window.addEventListener("load", getLoggedInUser);
+
+        const todoButton = document.getElementById("todoButton");
+
+        todoButton.addEventListener("click", function () {
+          // Redirect to the Todo page
+          window.location.href = "/todo";
+        });
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,25 @@
+<style>
+    /* Add margin to create a gap between todo items */
+    .todo-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+  </style>
+<div>
+    <% if (data && data.length > 0) { %>
+      <h2>Todo Items(Dynamic Rendering):</h2>
+      <ul>
+        <% data.forEach(function(todo) { %>
+          <li class = "todo-item">
+            <strong>Task:</strong> <%= todo.InputValue  %><br>
+            <strong>Priority:</strong> <%= todo.priority %><br>
+            <strong >Status:</strong> <%= todo.completed ? 'Completed' : 'Incomplete' %>
+          </li >
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No todo items found.</p>
+    <% } %>
+  </div>
+  
