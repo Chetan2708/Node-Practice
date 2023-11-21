@@ -16,11 +16,13 @@ app.listen(8000, function () {
     console.log("server on port 8000");
   });
 
+
   app.post("/send" , (req,res)=>{
     var phone = req.body.phone
     phone = "+91"+phone
      console.log(phone)
-  
+
+      
 
   const accountSid = "AC443b7425ddc8d4b5b17758a07cd07678";
   const authToken = "01260bbd99edb82bc9e6888559f062a4";
