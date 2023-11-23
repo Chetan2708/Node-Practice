@@ -19,6 +19,7 @@ const io = require('socket.io')(http)
 
 io.on('connection', (socket) => {
     console.log('Connected...')
+    
     socket.on('message', (msg) => {
         // message recieved ? broadcast to all
         socket.broadcast.emit('message', msg)
