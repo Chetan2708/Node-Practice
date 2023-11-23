@@ -12,13 +12,16 @@
     <section class="chat__section">
         <div class="brand">
             <img height="40" src="/wassup.png" alt="">
-            <h1>Let's Chat</h1>
+            <h1>Rescue Teams </h1>
         </div>
+        <div id="usernameContainer"></div>
+        
         <div class="message__area"></div>
         <div>
-            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..." ></textarea>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
         </div>
         <button id="sendButton">Send</button>
+        <button id="requestButton">Request</button> <!-- Add the Request button -->
     </section>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
