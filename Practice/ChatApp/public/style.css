@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -10,28 +11,32 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #1A1A1A;
+  background: #1a1a1a; /* Updated background color to black */
   font-family: "Roboto", sans-serif;
 }
+
 section.chat__section {
   width: 800px;
   max-width: 90%;
-  background: #fff;
+  background: #444; /* Updated card background color to gray */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
 .brand {
   padding: 20px;
-  background: #f1f1f1;
+  background: #2a2a2a; /* Updated brand background color to a darker gray */
   display: flex;
   align-items: center;
 }
+
 .brand h1 {
   text-transform: uppercase;
   font-size: 20px;
-  color: #444;
+  color: #00ff00; /* Neon green color for brand text */
   margin-left: 10px;
 }
+
 .message__area {
   height: 500px;
   padding: 16px;
@@ -40,13 +45,15 @@ section.chat__section {
   overflow-y: auto;
   padding-top: 40px;
 }
+
 textarea {
   width: 100%;
   border: none;
   padding: 20px;
   font-size: 16px;
   outline: none;
-  background: #fbfbfb;
+  background: #333; /* Updated textarea background color to a darker gray */
+  color: #fff; /* Updated textarea text color to white */
   resize: none;
 }
 
@@ -56,41 +63,36 @@ textarea {
   margin-bottom: 40px;
   max-width: 300px;
   position: relative;
+  color: white; 
 }
+
 .incoming {
-  background: #8f8be8;
-  color: #fff;
+  background: #00ff00;
+  color: black;
 }
+
 .outgoing {
   background: #e9eafd;
   color: #787986;
   margin-left: auto;
 }
+
 .message h4 {
   position: absolute;
   top: -20px;
   left: 0;
-  color: #333;
+  color: white; 
   font-size: 14px;
 }
 
-#sendButton{
+#sendButton,
+#requestButton {
   padding: 6px 12px;
   border: none;
   border-radius: 4px;
- background-color: green;
-  color: #1A1A1A;
+  background-color: #00ff00; /* Neon green color for buttons */
+  color: #1A1A1A;;
   cursor: pointer;
   outline: none;
+  margin-top: 10px; /* Add margin to separate buttons */
 }
-
-#requestButton{
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: green;
-  color: #1A1A1A;
-  cursor: pointer;
-  outline: none;
-}
-
